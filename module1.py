@@ -125,12 +125,12 @@ def getData():
             for row in rows:
                 if row[0] == "":
                     continue
-            sum = sum + int(row[0])
-        
+                sum = sum + int(row[0])
+        print(sum)
 
 
 
-    return render_template('calculation.html',sum = sum,per = 0)
+    return render_template('HTMLPage1.html',sum = sum,per = 0)
 
 
 
