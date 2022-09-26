@@ -26,6 +26,9 @@ def first():
 @app.route('/login')
 def loginpage():
     return render_template('login.html',msg = '')
+@app.route('/index')
+def indexpage():
+    return render_template('index.html')
 
 
 
@@ -140,7 +143,7 @@ def calculate():
     data1 =  request.form['sum']
     print(data)
     value = (int(data) * int(data1))/100
-    return render_template('calculation.html',sum = data1,per = value)
+    return render_template('HTMLPage1.html',sum = data1,per = value)
 
 
 

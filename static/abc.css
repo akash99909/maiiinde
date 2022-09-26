@@ -54,6 +54,18 @@
     position:relative;
     margin-left: 20%;
     width: 10rem;
+    background-color: #0dcaf0;
+
+}
+.bhh{
+    margin-left: 40%;
+    
+    
+}
+.bth{
+    display: flex;
+    justify-content: center;
+    background-color: #0dcaf0;
 
 }
 .toprow{

@@ -25,8 +25,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
+                <a href="{{ url_for('indexpage') }} ">Home</a>
 
           </form>
         </div>
@@ -41,18 +40,19 @@
         <form method='post' action='http://localhost:5000/form1'>
             <div class="firstcontainer">
                 <input type="text" class="toshow" value="Existing Data Size">
-            <input name="sum" value={{sum}}><br>
+            <input name="sum" value={{sum}} ><br>
         </div>
 
         <div class="secondcontainern">
             <input type="text" class="toshow" value="Overall Average Estimated % Quaterly Volume">
 
-            <input name="sum" value={{per}}><br>
+            <input name="sum" value={{per}} disabled><br>
 
         </div>
         <div class="thirdcontainer">
             <input type="text" class="toshow" value="Incremental">
             <input name='per'>
+
         </div>
         <button class = "btn btn-primary" type='submit'>submit</button>
         </form>
@@ -74,8 +74,9 @@
         <div class="newColumn">
             <input name="sen1[]"class="inputbox"><input name="sen2[]"class="inputbox"><input name="sen3[]"class="inputbox"><input name="sen4[]"class="inputbox"><input name="sen5[]"class="inputbox"><input name="sen6[]"class="inputbox"><input name="sen7[]"class="inputbox"><input name="sen8[]"class="inputbox"><input name="sen9[]"class="inputbox"><input name="sen10[]"class="inputbox"><input name="sen11[]"class="inputbox"><input name="sen12[]"class="inputbox">
         </div>
-        <br>
-        <input class = "btn btn-primary" type="submit" value="Submit">
+        <br><br><br>
+        <div class="bhh"><input class = "bth" type="submit" value="Submit"></div>
+        
     </form>
     
 
@@ -87,9 +88,14 @@
     
         function addRows() {
             s = document.getElementsByClassName("newColumn");
+            let r;
+            r=prompt("how many rows:", );
+            r=Number(r);
+            console.log(r);
+            for (let i = 0 ; i < r; i++){
             obj = document.createElement("div");
             obj.innerHTML = '<input name="sen1[]" class="inputbox"><input name = "sen2[]" class="inputbox"><input name="sen3[]" class="inputbox"><input name="sen4[]" class="inputbox"><input name="sen5[]" class="inputbox"><input name="sen6[]" class="inputbox"><input name="sen7[]" class="inputbox"><input name="sen8[]" class="inputbox"><input name="sen9[]" class="inputbox"><input name="sen10[]"class="inputbox"><input name="sen11[]" class="inputbox"><input name="sen12[]" class="inputbox">';
-            s[0].appendChild(obj)
+            s[0].appendChild(obj)}
         }
     </script>
 </body>
